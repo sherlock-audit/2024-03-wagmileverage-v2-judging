@@ -93,6 +93,14 @@ The protocol team fixed this issue in PR/commit https://github.com/RealWagmi/wag
 
 The liquidation bonus was charged more than initially expected, so the user’s cunning could only lead to a fair payment. But ultimately the bonus would still be returned to the trader. The trader paid a more liquidation bonus if he extracted more than one  NFT position, which in itself is a rare case... anyway, we removed it from the code..
 
+**spacegliderrrr**
+
+Fix looks good, liquidation bonus is now correctly proportional to borrow amount, no matter the number of lenders.
+
+**sherlock-admin4**
+
+The Lead Senior Watson signed off on the fix.
+
 # Issue M-2: When the amout of token acquired by a flash loan exceeds the expected value, the callback function will fail. 
 
 Source: https://github.com/sherlock-audit/2024-03-wagmileverage-v2-judging/issues/9 
@@ -178,4 +186,12 @@ The protocol team fixed this issue in PR/commit https://github.com/RealWagmi/wag
 **WangSecurity**
 
 After additional discussions, we decided to make this a valid medium, cause it's a valid attack vector, but takes a lot of funding and additional external factors
+
+**spacegliderrrr**
+
+Fix looks good, in case aggregator has extra funds, callback will not have to repay for them.
+
+**sherlock-admin4**
+
+The Lead Senior Watson signed off on the fix.
 
